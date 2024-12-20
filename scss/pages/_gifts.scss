@@ -1,0 +1,72 @@
+@use '../utils/variables';
+@use '../utils/mixins' as *;
+
+.catalog-section {
+  @include wrapper-column ($gap: 1.25rem);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background: url('/images/bg-garland.png') no-repeat;
+  background-size: contain;
+
+  .paragraph-l {
+    max-width: 426px;
+  }
+
+  .nav-category {
+    .nav-list {
+      @include flex-container();
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 130%;
+      letter-spacing: 0.6px;
+
+      .nav-item {
+        padding: 0.75rem 1.25rem;
+        text-transform: uppercase;
+        border-radius: 0.75rem;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+          cursor: default;
+          background-color: variables.$color-white-20;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          &:not(.active):hover {
+            cursor: pointer;
+            background-color: variables.$color-white-20;   
+          }          
+        }
+      }
+
+      @media (max-width: variables.$breakpoint-sm) {
+        gap: 0;
+
+        .nav-item {
+          padding: 0.75rem 0.5rem;
+        }
+      }
+    }
+  }
+  
+  .cards-wrap {
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+
+      @media (max-width: 1300px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 1000px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

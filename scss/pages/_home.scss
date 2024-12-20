@@ -1,0 +1,314 @@
+@use '../utils/variables';
+@use '../utils/mixins' as *;
+
+* {
+  box-sizing: border-box;
+}
+.main {
+  max-width: variables.$breakpoint-l;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: variables.$color-primary;
+}
+
+.section {
+  padding: 60px 0.5rem;
+  color: variables.$color-white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .wrapper {
+    max-width: 79.75rem;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    @include wrapper-column (
+            $gap: 0.75rem,
+            $padding: 0
+          );
+  }
+}
+
+.hero-section {
+  background: url('/images/bg-ball.png') center no-repeat, 
+              url('/images/bg-snow.png') center no-repeat;
+  background-size: cover;
+
+  .wrapper {
+    @include wrapper-column();
+    max-width: 27rem;
+  }
+}
+
+.about-section {
+  background-image: url('/images/bg-snow.png');
+  color: variables.$color-black;
+
+  .wrapper {
+    @include flex-container($alignItems: stretch);
+    height: 33rem;
+    border-radius: 20px;
+    background-color: variables.$color-bg-body;
+
+    .item {
+      flex: 1;
+
+      &.description {
+        align-self: center;
+
+        .item-content {
+          @include wrapper-column (
+            $alignX: start,
+            $gap: 1.25rem,
+            $padding: 3.8rem 0 3.75rem 3.75rem
+          );
+          max-width: 29.625rem;
+
+          .paragraph-m {
+            text-align: start;
+          }
+
+          @media (max-width: variables.$breakpoint-md) {
+            max-width: 23.5rem;
+            padding-right: 3.76rem;
+          }
+
+          @media (max-width: variables.$breakpoint-sm) {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+        }
+      }
+
+      &.bg-img {
+        border-radius: 20px;
+        background: url('/images/santa.png') center no-repeat,
+      }
+    }
+
+    @media (max-width: 600px) {
+      height: 880px;
+      flex-wrap: wrap;
+
+      .item-content {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .bg-img {
+        min-width: 100%;
+        min-height: 528px;
+      }
+    }
+  }
+}
+
+.slider-section {
+  background-image: url('/images/bg-snow.png');
+  .wrapper {
+    @include wrapper-column (
+            $gap: 1.25rem,
+            $padding: 0
+          );
+  }
+
+  .slider {
+    @include flex-container($alignItems: stretch);
+    align-self: start;
+    gap: 1.25rem;
+    transition: transform 1s ease-in-out;
+
+    .slide {
+      @include flex-container();
+      gap: 1.25rem;
+
+      .slide-text {
+        font-size: 5rem;
+        font-weight: 600;
+      }
+
+      .slide-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      &-1 {
+        .slide-img {          
+          background-image: url('/images/snowman.png');
+        }
+      }
+      &-2 {
+        .slide-img {          
+          background-image: url('/images/christmas-trees.png');
+        }
+      }
+      &-3 {
+        .slide-img {          
+          background-image: url('/images/christmas-tree-ball.png');
+        }
+      }
+      &-4 {
+        .slide-img {          
+          background-image: url('/images/fairytale-house.png');
+        }
+      }
+    }
+  }
+
+  .slider-controls {
+    align-self: end;
+
+    .prev {
+      margin-right: 1.25rem;
+    }
+  }
+}
+
+.best-section {
+  background-image: url('/images/bg-snow.png');
+  .wrapper {
+    @include wrapper-column (
+            $gap: 1.25rem,
+            $padding: 0
+          );
+  }
+}
+
+.cta-section {
+  margin-bottom: -2px;
+  background: url('/images/bg-forest.png') center bottom no-repeat, 
+              url('/images/bg-snow.png') center no-repeat;
+  background-size: contain;
+
+  .wrapper {
+    @include wrapper-column($gap: 1.25rem, $padding: 7.5rem 0 7.5rem 0);
+    max-width: 26.625rem;
+  }
+
+  .counter-wrapper {
+    @include wrapper-column(
+      $gap: 0.5rem,
+      $padding: 0
+    );
+
+    .counter-box {
+      @include flex-container();
+      padding: 0.5rem 0.75rem 0.75rem;
+      border-radius: 20px;
+      background-color: variables.$color-white-40;
+
+      .item {
+        @include wrapper-column(
+          $gap: 0,
+          $padding: 0
+        );
+        position: relative;
+        width: 80px;
+
+        .counter {
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 152%;
+          letter-spacing: 3.84px;
+        }
+
+        .counter-text {
+          font-size: 0.75rem;
+          font-weight: 600;
+          line-height: 130%;
+          letter-spacing: 0.6px;
+        }
+
+        &:not(:last-child)::after {
+          content: '|';
+          position: absolute;
+          right: 0;
+          color: variables.$color-white;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: variables.$breakpoint-md) {
+    background-size: cover;
+  }
+}
+
+.cards {
+  @include flex-container($wrap: wrap);
+  gap: 0.75rem;
+}
+
+.card {
+    width: 310px;
+    border-radius: 20px;
+    background-color: variables.$color-bg-secondary;
+
+    .card-img {
+      width: 100%;
+      height: 230px;
+
+      .prodact-img {
+        width: 100%;
+      }
+    }
+
+    .card-text {
+      color: variables.$color-black;
+      background-color: variables.$color-white;
+      border-radius: 20px;
+      padding: 1.25rem;
+
+      .card-category {
+        padding-bottom: 0.5rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+        line-height: 130%;
+        text-transform: uppercase;
+
+        &.for-work {
+          color: variables.$color-purple;
+        }
+
+        &.for-health {
+          color: variables.$color-green;
+        }
+
+        &.for-harmony {
+          color: variables.$color-pink;
+        }
+      }
+
+      .card-name {
+        height: calc(2 * 24.21px);
+        max-height: calc(2 * 24.21px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        line-height: 24.32px;
+        text-transform: uppercase;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        cursor: pointer;
+  
+        .card-name {
+          color: variables.$color-primary;
+        }
+      }
+    }
+  }
