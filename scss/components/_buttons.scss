@@ -1,0 +1,76 @@
+@use '../utils/variables';
+
+.button {  
+  padding: 1.25rem 2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  line-height: 130%;
+  color: variables.$color-white;
+  border: none;
+  border-radius: 1.25rem;
+  background-color: variables.$color-black;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      cursor: pointer;
+      color: variables.$color-black;
+      background-color: variables.$color-white;
+    }
+  }
+}
+
+.button-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: variables.$color-white;
+  background-color: transparent;
+  border: 1px solid variables.$color-white;
+  border-radius: 20px;
+
+  &.inactive {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    &:not(.inactive):hover {
+      cursor: pointer;
+      color: variables.$color-primary;
+      background-color: variables.$color-white;
+    }
+  }
+
+  .svg-icon {
+    vertical-align: middle;
+  }
+
+  &.rounded {
+    border-radius: 50%;
+  }
+
+  &.white-bg {
+    color: variables.$color-primary;
+    border-color: variables.$color-primary;
+    background-color: variables.$color-white;
+  }
+}
+
+.to-top {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  transition: opacity 0.5s ease-in-out;
+
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+

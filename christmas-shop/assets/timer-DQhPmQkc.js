@@ -1,0 +1,2 @@
+const c=document.getElementById("days"),r=document.getElementById("hours"),l=document.getElementById("minutes"),u=document.getElementById("seconds"),i=()=>{const e=new Date,n=e.getUTCFullYear()+1,t=new Date(Date.UTC(n,0,1,0,0,0))-e,a=Math.floor(t/1e3%60),d=Math.floor(t/1e3/60%60),m=Math.floor(t/1e3/60/60%24);return{days:Math.floor(t/1e3/60/60/24),hours:m,minutes:d,seconds:a}},o=()=>{const{days:e,hours:n,minutes:s,seconds:t}=i();c.textContent=e,r.textContent=n,l.textContent=s,u.textContent=t};c&&(o(),setInterval(o,1e3));
+//# sourceMappingURL=timer-DQhPmQkc.js.map

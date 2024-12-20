@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Shop</title>
+  </head>
+  <body>
+    <header class="header-page">
+      <a class="logo" href="./index.html">
+        <img src="./images/icons/snowflake.svg" alt="Logo Snowflake">
+        THE GIFTS
+      </a>
+      
+      <button class="nav-btn" aria-label="Toggle navigation">
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="gifts.html">GIFTS</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#about">ABOUT</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#best">BEST</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#contacts">CONTACTS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="section hero-section">
+        <div class="wrapper">
+          <h1 class="sr-only">Gift Shop</h1>
+          <h2 class="heading-2">Merry Christmas</h2>
+          <p class="paragraph-l ">
+            Gift yourself the magic of new possibilities
+          </p>
+          <a href="gifts.html" class="button">Explore Magical Gifts</a>
+          <h2 class="heading-2">and Happy New Year</h2>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="wrapper">
+          <div class="item description">
+            <div class="item-content">
+              <h2 class="heading-2 text-primary">About</h2>
+              <p class="paragraph-m ">
+                Unleash your inner superhero!
+              </p>
+              <p class="paragraph ">
+                This New Year marks the beginning of your journey to inner harmony and new strengths. We offer unique gifts that will help you improve your life.
+              </p>
+            </div>
+          </div>
+          <div class="item bg-img"></div>          
+        </div>
+      </section>
+
+      <section class="section slider-section">
+        <div id="slider-wrapper" class="wrapper">
+          <div class="section-title">
+            <h2 class="heading-2">Become Happier!</h2>
+            <p class="paragraph-m ">
+              in the new 2025
+            </p>
+          </div>          
+          <div class="slider">
+            <div class="slide slide-1">
+              <div class="slide-text">LIVE</div>
+              <div class="slide-img"></div>
+            </div>
+            <div class="slide slide-2">
+              <div class="slide-text">CREATE</div>
+              <div class="slide-img"></div>
+            </div>
+            <div class="slide slide-3">
+              <div class="slide-text">LOVE</div>
+              <div class="slide-img"></div>
+            </div>
+            <div class="slide slide-4">
+              <div class="slide-text">DREAM</div>
+              <div class="slide-img"></div>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="button-icon prev inactive" id="prev">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="arrow-prev">
+                <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </button>
+            <button class="button-icon next" id="next">
+              <svg class="svg-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="arrow-next">
+                  <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="best" class="section best-section">
+        <div class="wrapper">
+          <div class="section-title">
+            <h2 class="heading-2">Best Gifts</h2>
+            <p class="paragraph-m ">
+              especially for you
+            </p>
+          </div>          
+          <div id="cards-container" class="cards"></div>
+        </div>
+      </section>
+
+      <section class="section cta-section"> 
+        <div class="wrapper">
+          <p class="paragraph-m">
+            Ready to start your journey to a better version of yourself?
+          </p>
+          <a href="gifts.html" class="button">Explore Magical Gifts</a>
+          <div class="counter-wrapper">
+            <h2 class="heading-2">The New Year is Coming Soon...</h2>
+            <div id="timer" class="counter-box">
+              <div class="item">
+                <span id="days" class="counter"></span>
+                <span class="counter-text">days</span>
+              </div>
+              <div class="item">
+                <span id="hours" class="counter"></span>
+                <span class="counter-text">hours</span>
+              </div>
+              <div class="item">
+                <span id="minutes" class="counter"></span>
+                <span class="counter-text">minutes</span>
+              </div>
+              <div class="item">
+                <span id="seconds" class="counter"></span>
+                <span class="counter-text">seconds</span>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts" class="footer">
+      <div class="wrapper">         
+        <div class="footer-cards">
+          <a href="tel:+375291112233" class="card card-1" aria-label="Call us: +375 (29) 111-22-33">
+            <div class="card-img"></div>
+            <p class="paragraph-m">+375 (29) 111-22-33</p>
+            <h3 class="heading-3">call us</h3>
+          </a>
+          <a href="https://www.google.com/maps?q=Magic+Forest" class="card card-2" target="_blank" rel="noopener noreferrer" aria-label="Find us at Magic Forest">
+            <div class="card-img"></div>
+            <p class="paragraph-m">Magic forest</p>
+            <h3 class="heading-3">meet us</h3>
+          </a>
+          <a href="mailto:gifts@magic.com" class="card card-3" aria-label="Write to us: gifts@magic.com">
+            <div class="card-img"></div>
+            <p class="paragraph-m">gifts@magic.com</p>
+            <h3 class="heading-3">write us</h3>
+          </a>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="social">
+            <a href="https://telegram.com" class="social-link" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="telegram">
+                <path id="Vector_t" d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </a>
+            <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="facebook">
+                <path id="Vector_f" d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </a>
+            <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="instagram">
+                <path id="Vector_1" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Vector_2" d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="currentColor" stroke-width="1.5"/>
+                <path id="Vector_3" d="M17.5 6.51L17.51 6.49889" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+              </svg>
+            </a>
+            <a href="https://x.com" class="social-link" aria-label="X" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="X">
+                <path id="Vector_x_1" d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z" stroke="currentColor" stroke-width="1.5"/>
+                <path id="Vector_x_2" d="M20 3L4 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <p>
+            © Copyright 2025, All Rights Reserved
+          </p>
+          <h2 class="heading-2">
+            <a href="https://rs.school/" target="_blank" rel="noopener noreferrer" aria-label="Made in Rolling Scopes School">
+              Made in Rolling Scopes School
+            </a>
+          </h2>
+        </div> 
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

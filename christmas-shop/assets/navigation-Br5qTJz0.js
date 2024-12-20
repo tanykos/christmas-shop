@@ -1,0 +1,2 @@
+const t=document.querySelector(".nav-btn"),e=document.querySelector(".navigation"),n=document.querySelectorAll(".navigation-item"),s=document.querySelector("body"),c=()=>{s.classList.remove("no-scroll"),t.classList.remove("active"),e.classList.remove("active")},i=()=>{t.classList.toggle("active"),e.classList.toggle("active"),e.classList.contains("active")?(s.classList.add("no-scroll"),n.forEach(o=>{o.addEventListener("click",c)})):c()};t.addEventListener("click",i);
+//# sourceMappingURL=navigation-Br5qTJz0.js.map

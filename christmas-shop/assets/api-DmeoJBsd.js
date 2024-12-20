@@ -1,0 +1,2 @@
+import s from"./utils-Dj6Q6ZiA.js";const e=4;async function o(){try{return await(await fetch("./gifts.json")).json()}catch(t){console.error("Error: ",t)}}async function c(){const t=await o(),r=s(t,e);return Array.from(r)}async function f(t){try{return(await o()).find(n=>n.name.toLowerCase()===t.toLowerCase())}catch(r){console.error("Error: ",r)}}export{c as default,f as getGiftByName,o as getGifts};
+//# sourceMappingURL=api-DmeoJBsd.js.map
