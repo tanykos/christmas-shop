@@ -13,5 +13,5 @@ export default defineConfig({
   css: {
     devSourcemap: true // enable CSS source maps during development
   },
-  base: "/tanykos/christmas-shop/"
+  base: "/christmas-shop"
 })
